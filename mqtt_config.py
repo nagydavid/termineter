@@ -1,0 +1,9 @@
+mqtt_user = "davikachka"
+mqtt_password = "2e0b0498c7c922f9b31f42c423e893b7994555dbdc9b1a96d3e0279ab51a2263"
+mqtt_host = "192.168.50.188"
+mqtt_port = 1883
+mqtt_topic_prefix = "NES"
+meter_name = "NES_METER"
+meter_id = "83332_3IAAD"
+meter_key = "3737383438623533386262646162316161333236"
+meter_serial = "/dev/ttyUSB0"
