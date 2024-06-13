@@ -6,15 +6,15 @@ import json
 import logging
 from c1218.errors import C1218ReadTableError
 from termineter.module import TermineterModuleOptical
-from mqtt_config import (
-    mqtt_user,
-    mqtt_password,
-    mqtt_host,
-    mqtt_port,
-    meter_name,
-    mqtt_topic_prefix,
-    meter_id,
-)
+import os
+
+mqtt_user = os.environ.get('MQTT_USER')
+mqtt_password = os.environ.get('MQTT_PASSWORD')
+mqtt_host = os.environ.get('MQTT_HOST')
+mqtt_port = os.environ.get('MQTT_PORT')
+meter_name = os.environ.get('METER_NAME')
+mqtt_topic_prefix = os.environ.get('MQTT_TOPIC_PREFIX')
+meter_id = os.environ.get('METER_ID')
 
 class Module(TermineterModuleOptical):
     def __init__(self, *args, **kwargs):

@@ -90,10 +90,10 @@ class Framework(object):
 		# on their respective types.  See framework/templates.py for more info.
 		self.options = termineter.options.Options(self.directories)
 		self.options.add_boolean('USE_COLOR', 'enable color on the console interface', default=False)
-		self.options.add_string('SERIAL_CONNECTION', 'serial connection string',default='/dev/ttyUSB0')
+		self.options.add_string('SERIAL_CONNECTION', 'serial connection string',default=os.getenv('METER_SERIAL', '/dev/ttyUSB0'))
 		self.options.add_string('USERNAME', 'serial username', default='0000')
 		self.options.add_integer('USER_ID', 'serial user id', default=1)
-		self.options.add_string('PASSWORD', 'serial c12.18 password', default='3737383438623533386262646162316161333236')
+		self.options.add_string('PASSWORD', 'serial c12.18 password', default=os.getenv('METER_KEY', '0000000000000000000000000000000000000000'))
 		self.options.add_boolean('PASSWORD_HEX', 'if the password is in hex', default=True)
 		self.advanced_options = termineter.options.AdvancedOptions(self.directories)
 		self.advanced_options.add_boolean('AUTO_CONNECT', 'automatically handle connections for modules', default=True)

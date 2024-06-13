@@ -42,3 +42,4 @@ docs/html
 Pipfile.lock
 table_diff.html
 todo.txt
+.env
