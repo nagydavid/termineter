@@ -103,7 +103,7 @@ class InteractiveInterpreter(termineter.cmd.Cmd):
 		self.print_status = self.frmwk.print_status
 
 		if check_rc_file:
-			check_rc_file = os.path.join(self.frmwk.directories.user_data, 'console.rc')
+			# check_rc_file = os.path.join(self.frmwk.directories.user_data, 'console.rc')
 			if os.path.isfile(check_rc_file) and os.access(check_rc_file, os.R_OK):
 				self.print_status('Running commands from resource file: ' + check_rc_file)
 				self.run_rc_file(check_rc_file)

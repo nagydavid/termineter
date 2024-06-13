@@ -38,6 +38,7 @@ from termineter.module import TermineterModuleOptical
 import binascii
 import os
 import time
+import struct
 
 class Module(TermineterModuleOptical):
 	def __init__(self, *args, **kwargs):
@@ -83,3 +84,5 @@ class Module(TermineterModuleOptical):
 		out_file = open('/var/tmp/BT28', 'w', 1)
 		out_file.write(binascii.b2a_hex(data).decode('utf-8'))
 		out_file.close()
+
+

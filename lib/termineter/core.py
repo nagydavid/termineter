@@ -93,7 +93,7 @@ class Framework(object):
 		self.options.add_string('SERIAL_CONNECTION', 'serial connection string',default='/dev/ttyUSB0')
 		self.options.add_string('USERNAME', 'serial username', default='0000')
 		self.options.add_integer('USER_ID', 'serial user id', default=1)
-		self.options.add_string('PASSWORD', 'serial c12.18 password', default='<your 20 char decryptkey received from KONSTANT>')
+		self.options.add_string('PASSWORD', 'serial c12.18 password', default='3737383438623533386262646162316161333236')
 		self.options.add_boolean('PASSWORD_HEX', 'if the password is in hex', default=True)
 		self.advanced_options = termineter.options.AdvancedOptions(self.directories)
 		self.advanced_options.add_boolean('AUTO_CONNECT', 'automatically handle connections for modules', default=True)
